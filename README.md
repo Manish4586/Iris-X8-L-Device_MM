@@ -1,4 +1,4 @@
-# LineageOS 14.1
+# LineageOS 13.0
 
 7.1.2 Iris X8 L
 
@@ -18,10 +18,6 @@ Display | 5" 1280 x 720 px
 
 
 # Command To Build :-
-
-repo init -u git://github.com/TestMT6572/android.git -b cm-14.1
-
-repo sync
 
 git clone https://github.com/Manish4586/Iris-X8-L-Device_3.10.72.git device/Lava/IrisX8
 
