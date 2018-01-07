@@ -24,10 +24,6 @@ TARGET_CPU_MEMCPY_OPT_DISABLE := true
 WITH_DEXPREOPT := false
 DONT_DEXPREOPT_PREBUILTS := true
 
-# Link against libxlog
-TARGET_LDPRELOAD := 
-libxlog.so
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := mt6592
 
