@@ -22,9 +22,8 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_PACKAGES += \
     Torch
 
-# Symbols
 PRODUCT_PACKAGES += \
-    libmtk_symbols
+    libxlog
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -114,10 +113,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     Snap
     
-# Charger
-PRODUCT_PACKAGES += \
-    charger_res_images
-
 # FM Radio
 PRODUCT_PACKAGES += \
     FMRadio \
