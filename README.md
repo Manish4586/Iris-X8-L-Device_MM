@@ -1,6 +1,6 @@
 # LineageOS 13.0
 
-7.1.2 Iris X8 L
+6.0.1 Iris X8 L
 
 Basic   | Spec Sheet
 -------:|:-------------------------
@@ -23,7 +23,7 @@ repo init -u git://github.com/LineageOS/android.git -b cm-13.0
 
 repo sync
 
-git clone https://github.com/Manish4586/Iris-X8-L-Device_3.10.72.git device/Lava/IrisX8
+git clone https://github.com/Manish4586/Iris-X8-L-Device_MM.git device/Lava/IrisX8
 
 git clone https://github.com/Manish4586/Iris-X8-L-Vendor_3.10.72.git vendor/Lava/IrisX8
 
