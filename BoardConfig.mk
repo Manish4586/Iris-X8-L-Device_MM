@@ -60,8 +60,8 @@ BOARD_CACHEIMAGE_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Flags
-COMMON_GLOBAL_CFLAGS   += -mfpu=neon -mfloat-abi=softfp
-COMMON_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CFLAGS   += -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
 TARGET_KMODULES := true
 
@@ -106,9 +106,6 @@ TARGET_NO_SENSOR_PERMISSION_CHECK := true
 
 # Offline charging
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/BOOT/BOOT/boot/boot_mode
-BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
-BOARD_CHARGER_ENABLE_SUSPEND := true
-BOARD_CHARGER_SHOW_PERCENTAGE := true
 
 # EGL settings
 BOARD_EGL_CFG := $(LOCAL_PATH)/configs/egl.cfg
