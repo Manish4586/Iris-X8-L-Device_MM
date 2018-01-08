@@ -19,7 +19,7 @@ Display | 5" 1280 x 720 px
 
 # Command To Build :-
 
-repo https://github.com/LineageOS-13-MT6572/android.git -b cm-13.0
+repo init -u git://github.com/LineageOS/android.git -b cm-13.0
 
 repo sync
 
@@ -31,6 +31,8 @@ source build/envsetup.sh
 
 cd device/Lava/IrisX8/patches
 
-source apply.sh
+source . apply.sh
 
 breakfast IrisX8
+
+brunch IrisX8
