@@ -1,6 +1,9 @@
 # inherit from the proprietary version
 -include vendor/Lava/IrisX8/BoardConfigVendor.mk
 
+# GPS
+TARGET_SPECIFIC_HEADER_PATH := device/Lava/IrisX8/include
+
 LOCAL_PATH := device/Lava/IrisX8
 
 # Off NINJA
