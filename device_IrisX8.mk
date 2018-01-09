@@ -23,8 +23,7 @@ PRODUCT_PACKAGES += \
     Torch
 
 PRODUCT_PACKAGES += \
-    libxlog \
-    libmtk_symbols
+    libxlog 
 
 # Audio
 PRODUCT_PACKAGES += \
