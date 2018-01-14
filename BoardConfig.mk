@@ -6,9 +6,6 @@ TARGET_SPECIFIC_HEADER_PATH := device/Lava/IrisX8/include
 
 LOCAL_PATH := device/Lava/IrisX8
 
-# Off NINJA
-#USE_NINJA := false
-
 # Board
 TARGET_BOARD_PLATFORM := mt6592
 TARGET_CPU_ABI := armeabi-v7a
