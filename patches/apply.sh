@@ -4,8 +4,8 @@ cd system/core
 patch -p1 < ../../device/Lava/IrisX8/patches/core.patch 
 cd ../..
 cd packages/apps/Settings 
-$patch -p1 < ../../../device/Lava/IrisX8/patches/dev_info.patch 
-$cd ../../.. 
+patch -p1 < ../../../device/Lava/IrisX8/patches/dev_info.patch 
+cd ../../.. 
 cd system*/bt 
 patch -p1 < ../../device/Lava/IrisX8/patches/bt.patch 
 cd .. 
