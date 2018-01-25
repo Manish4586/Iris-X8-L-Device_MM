@@ -21,6 +21,9 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_PACKAGES += \
     Torch
+    
+PRODUCT_PACKAGES += \
+    libgralloc_extra
 
 PRODUCT_PACKAGES += \
     libxlog 
