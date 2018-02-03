@@ -1,4 +1,4 @@
-[!CyanogenMod](https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTKpKX43FtjYuje4IvapCgwMKBTlrOdLiq_aZz6tqUsuQHL2IJ78ICBpVVvZQ)
+![CyanogenMod](https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTKpKX43FtjYuje4IvapCgwMKBTlrOdLiq_aZz6tqUsuQHL2IJ78ICBpVVvZQ)
 
 6.0.1 Iris X8 L
 
@@ -37,4 +37,4 @@ breakfast IrisX8
 
 brunch IrisX8
 
-[!Lava Iris X8](http://www.lavamobiles.com/lavastorecms/material/product/lava-smartphone-iris-x8-850x700lollipoooopupgrade-04022015.jpg)
+![Lava Iris X8](http://www.lavamobiles.com/lavastorecms/material/product/lava-smartphone-iris-x8-850x700lollipoooopupgrade-04022015.jpg)
