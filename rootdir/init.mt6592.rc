@@ -242,11 +242,6 @@ on post-fs-data
     chown system system /dev/rtc0
     chmod 0660 /dev/rtc0
 
-    # M4U
-    #insmod /system/lib/modules/m4u.ko
-    chmod 0440 /dev/M4U_device
-    chown system camera /dev/M4U_device
-
     # Start sensor
     chmod 0660 /dev/hwmsensor
     chmod 0660 /dev/gyroscope
@@ -470,9 +465,8 @@ on post-fs-data
     chmod 0660 /dev/FM50AF
     chmod 0660 /dev/CAM_CAL_DRV
     chmod 0660 /dev/EEPROM_M24C08F
-    chmod 0660 /dev/DW9718AF
-    chmod 0660 /dev/DW9714AF  
-
+    chmod 0660 /dev/DW9714AF
+    
     chown system camera /dev/camera-sysram
     chown system camera /dev/camera-isp
     chown system camera /dev/camera-pipemgr
@@ -482,8 +476,7 @@ on post-fs-data
     chown system camera /dev/FM50AF
     chown system camera /dev/CAM_CAL_DRV
     chown system camera /dev/EEPROM_M24C08F
-    chown system camera /dev/DW9718AF
-    chown system camera /dev/DW9714AF  
+    chown system camera /dev/DW9714AF
     
     #MATV
     chmod 0660 /dev/MATV
