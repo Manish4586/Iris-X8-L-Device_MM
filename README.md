@@ -1,4 +1,4 @@
-# LineageOS 13.0
+[!CyanogenMod](https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTKpKX43FtjYuje4IvapCgwMKBTlrOdLiq_aZz6tqUsuQHL2IJ78ICBpVVvZQ)
 
 6.0.1 Iris X8 L
 
@@ -25,14 +25,16 @@ repo sync
 
 git clone https://github.com/Manish4586/Iris-X8-L-Device_MM.git device/Lava/IrisX8
 
-git clone https://github.com/Manish4586/Iris-X8-L-Vendor_3.10.72.git vendor/Lava/IrisX8
+git clone https://github.com/Manish4586/Iris-X8-L-Vendor_3.10.72.git -b los-13 vendor/Lava/IrisX8
 
 source build/envsetup.sh
 
 cd device/Lava/IrisX8/patches
 
-source . apply.sh
+ . apply.sh
 
 breakfast IrisX8
 
 brunch IrisX8
+
+[!Lava Iris X8](http://www.lavamobiles.com/lavastorecms/material/product/lava-smartphone-iris-x8-850x700lollipoooopupgrade-04022015.jpg)
