@@ -1,10 +1,13 @@
 # inherit from the proprietary version
 -include vendor/Lava/IrisX8/BoardConfigVendor.mk
 
+LOCAL_PATH := device/Lava/IrisX8
+
+# Off NINJA
+#USE_NINJA := false
+
 # GPS
 TARGET_SPECIFIC_HEADER_PATH := device/Lava/IrisX8/include
-
-LOCAL_PATH := device/Lava/IrisX8
 
 # Board
 TARGET_BOARD_PLATFORM := mt6592
@@ -31,7 +34,7 @@ TARGET_USERIMAGES_USE_EXT4:=true
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := false
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := Iris X8
+TARGET_OTA_ASSERT_DEVICE := irisX8
 
 # MTK HARDWARE
 OLD_KERNEL := true
@@ -64,13 +67,18 @@ TARGET_KMODULES := true
 COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
+# Kernel 
+BOARD_KERNEL_CMDLINE += \
+	bootopt=64S3,32S1,32S1 \
+	androidboot.selinux=permissive
+  
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
 BOARD_CUSTOM_MKBOOTIMG := mtkbootimg
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/bootimg.mk
 BOARD_CUSTOM_BOOTIMG := true
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x00000100 --board 1446021654 --mtk 1
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x0e000000 --board 1441186574 --mtk 1
 
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/virtual/android_usb/android0/f_mass_storage/lun%d/file"
 
@@ -88,6 +96,8 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0/gadg
 TW_MAX_BRIGHTNESS := 255
 RECOVERY_SDCARD_ON_DATA := true
 TW_DEFAULT_EXTERNAL_STORAGE := true
+TW_CRYPTO_REAL_BLKDEV := "/dev/block/mmcblk0p3"
+TW_CRYPTO_MNT_POINT := "/data"
 TW_CRYPTO_FS_TYPE := "ext4"
 TW_INCLUDE_FB2PNG := true
 
@@ -102,6 +112,9 @@ TARGET_NO_SENSOR_PERMISSION_CHECK := true
 
 # Offline charging
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/BOOT/BOOT/boot/boot_mode
+BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
+BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGER_SHOW_PERCENTAGE := true
 
 # EGL settings
 BOARD_EGL_CFG := $(LOCAL_PATH)/configs/egl.cfg
