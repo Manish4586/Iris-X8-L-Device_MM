@@ -1,6 +1,6 @@
-![CyanogenMod](https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTKpKX43FtjYuje4IvapCgwMKBTlrOdLiq_aZz6tqUsuQHL2IJ78ICBpVVvZQ)
+![LineageOS](https://lineageos.org/images/logo-2.png)
 
-6.0.1 Iris X8 L
+# 6.0.1 Iris X8 L
 
 Basic   | Spec Sheet
 -------:|:-------------------------
@@ -17,13 +17,16 @@ Display | 5" 1280 x 720 px
 
 
 
+
 # Command To Build :-
+
+Repo Source :
 
 repo init -u git://github.com/LineageOS/android.git -b cm-13.0
 
 repo sync
 
-git clone https://github.com/Manish4586/Iris-X8-L-Device_MM.git device/Lava/IrisX8
+git clone https://github.com/Manish4586/Iris-X8-L-Device_3.10.72.git -b los-13 device/Lava/IrisX8
 
 git clone https://github.com/Manish4586/Iris-X8-L-Vendor_3.10.72.git -b los-13 vendor/Lava/IrisX8
 
@@ -31,10 +34,8 @@ source build/envsetup.sh
 
 cd device/Lava/IrisX8/patches
 
- . apply.sh
+source apply.sh
 
 breakfast IrisX8
 
-brunch IrisX8
-
-![Lava Iris X8](http://www.lavamobiles.com/lavastorecms/material/product/lava-smartphone-iris-x8-850x700lollipoooopupgrade-04022015.jpg)
+![Lava Iris X8](http://www.lavamobiles.com/lavastorecms/material/product/lava-smartphone-iris-x8-375x700-04022015.jpg)
