@@ -21,19 +21,16 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_PACKAGES += \
     Torch
+
+PRODUCT_PACKAGES += \
+    libxlog
     
 PRODUCT_PACKAGES += \
     libgralloc_extra
 
-PRODUCT_PACKAGES += \
-    libxlog 
-
 # Audio
 PRODUCT_PACKAGES += \
-    audio.primary.mt6592 \
-    audio_policy.default \
     audio_policy.stub \
-    audio.usb.default \
     audio.r_submix.default \
     libaudio-resampler \
     tinymix
@@ -45,7 +42,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
     
 # Bluetooth
-PRODUCT_PACKAGES += libbt-vendor
+PRODUCT_PACKAGES += \
+    libbt-vendor
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=MediaTekRIL
@@ -59,6 +57,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/factory_init.rc:root/factory_init.rc \
     $(LOCAL_PATH)/rootdir/fstab.mt6592:root/fstab.mt6592 \
     $(LOCAL_PATH)/rootdir/init.modem.rc:root/init.modem.rc \
+    $(LOCAL_PATH)/rootdir/init.project.rc:root/init.project.rc \
     $(LOCAL_PATH)/rootdir/init.mt6592.rc:root/init.mt6592.rc \
     $(LOCAL_PATH)/rootdir/init.mt6592.usb.rc:root/init.mt6592.usb.rc \
     $(LOCAL_PATH)/rootdir/init.recovery.mt6592.rc:/init.recovery.mt6592.rc \
@@ -84,6 +83,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml
 
+    #$(LOCAL_PATH)/configs/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
+    $(LOCAL_PATH)/configs/android.hardware.microphone.xml:system/etc/permissions/android.hardware.microphone.xml
+    #$(LOCAL_PATH)/configs/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml
+    
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/mtk-kpd.kl:system/usr/keylayout/mtk-kpd.kl
@@ -101,18 +104,18 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hostapd/hostapd.accept:system/etc/hostapd/hostapd.accept \
     $(LOCAL_PATH)/configs/hostapd/hostapd.deny:system/etc/hostapd/hostapd.deny
 
-# Keylayout overrides
-PRODUCT_COPY_FILES_OVERRIDES += \
-    system/usr/keylayout/Generic.kl
-
 # Camera
 PRODUCT_PACKAGES += \
     Snap
     
 # FM Radio
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
+
+# Keylayout overrides
+PRODUCT_COPY_FILES_OVERRIDES += \
+    system/usr/keylayout/Generic.kl
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -149,12 +152,8 @@ PRODUCT_DEVICE := IrisX8
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
-# AAPT
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
-
 PRODUCT_PACKAGES += \
     librs_jni \
     com.android.future.usb.accessory
 
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
