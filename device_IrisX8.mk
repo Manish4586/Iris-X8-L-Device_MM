@@ -27,6 +27,8 @@ PRODUCT_PACKAGES += \
     
 PRODUCT_PACKAGES += \
     libgralloc_extra
+   
+PRODUCT_PACKAGES += libmt6592    
 
 # Audio
 PRODUCT_PACKAGES += \
